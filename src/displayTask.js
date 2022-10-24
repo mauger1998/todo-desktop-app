@@ -12,7 +12,7 @@ function displayTask(task) {
         let taskBox = document.createElement("div")
         taskBox.classList.add("taskBox")
         section.appendChild(taskBox)
-        taskBox.textContent = `Task: ${task.title}`
+        taskBox.textContent = `Task: ${newTaskArray[i].title}`
 
     }
 }
