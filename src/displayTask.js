@@ -12,7 +12,20 @@ function displayTask(task) {
         let taskBox = document.createElement("div")
         taskBox.classList.add("taskBox")
         section.appendChild(taskBox)
-        taskBox.textContent = `Task: ${newTaskArray[i].title}`
+        let taskTitleDiv = document.createElement("div")
+        taskTitleDiv.classList.add("taskTitleDiv")
+        taskBox.appendChild(taskTitleDiv)
+        taskTitleDiv.textContent = `Task: ${newTaskArray[i].title}`
+
+        
+        let taskDateDiv = document.createElement("div")
+        taskDateDiv.classList.add("taskDateDiv")
+        taskBox.appendChild(taskDateDiv)
+        taskDateDiv.textContent = `Date: ${newTaskArray[i].dueDate}`
+
+
+        
+        
         let checkbox = document.createElement("input")
         let checkboxLabel = document.createElement("label")
         checkboxLabel.textContent = "Complete"
