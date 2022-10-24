@@ -1,3 +1,5 @@
+import { loadForm } from "./loadForm.js"
+
 const body = document.querySelector("body")
 
 function loadDom() {
@@ -5,6 +7,8 @@ function loadDom() {
     body.appendChild(addATaskButton)
     addATaskButton.classList.add("taskAdd")
     addATaskButton.textContent = "Add a Task!"
+    loadForm()
+    
 }
 
 export { loadDom }

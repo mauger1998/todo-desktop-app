@@ -9,7 +9,12 @@ function loadForm() {
     mainFormBody.appendChild(taskTitleLabel);
     mainFormBody.appendChild(taskTitleInput);
     body.appendChild(mainFormBody);
-    mainFormBody.classList.add("mainFormBody")
+    mainFormBody.classList.add("mainFormBody");
+
+    const formButton = document.createElement("button");
+    formButton.textContent = "Create Task"
+    mainFormBody.appendChild(formButton)
+    mainFormBody.classList.add("appear")
     
 }
 
