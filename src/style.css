@@ -37,3 +37,14 @@ button {
     width:90vw;
     background-color:rgb(234, 232, 232);
 }
+section {
+    display:flex;
+    flex-direction: column;
+    gap:1em;
+}
+.taskBox {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;}
