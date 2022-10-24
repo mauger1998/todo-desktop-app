@@ -30,6 +30,9 @@ const taskForm = document.querySelector(".mainFormBody")
 const titleInput = document.querySelector(".titleInput")
 const dueDateInput = document.querySelector(".dueDateInput")
 const header = document.querySelector(".header")
+const checkbox = document.querySelectorAll("#checkbox")
+const taskBox = document.querySelectorAll(".taskBox")
+
 
 
 addATaskButton.addEventListener("click", (e) => {
@@ -55,7 +58,17 @@ taskForm.addEventListener("submit", (e) => {
 
 })
 
+
 header.appendChild(taskForm)
+
+let arrayCheckboxes = Array.from(checkbox)
+let taskBoxArray = Array.from(taskBox);
+arrayCheckboxes.forEach(checkbox => {
+    let index = arrayCheckboxes.indexOf(checkbox)
+    checkbox.addEventListener("click", (e) => {
+        taskBoxArray[index].classList.toggle("opacity")
+    })
+})
 
 export { newTaskArray }
 export { returnedData }

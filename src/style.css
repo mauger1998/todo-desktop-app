@@ -58,6 +58,11 @@ form > button {
     height:10vh;
     width:90vw;
     background-color:rgba(234, 232, 232, 0.485);
+    
+}
+
+.opacity {
+    opacity:0.3;
 }
 section {
     display:flex;
