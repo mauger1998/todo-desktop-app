@@ -10,6 +10,7 @@ function loadForm() {
     mainFormBody.appendChild(taskTitleInput);
     body.appendChild(mainFormBody);
     mainFormBody.classList.add("mainFormBody");
+    taskTitleInput.classList.add("titleInput")
 
     const formButton = document.createElement("button");
     formButton.textContent = "Create Task"

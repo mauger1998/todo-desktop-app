@@ -7,6 +7,7 @@ class Task {
 
 function createTask(title) {
     let newTask = new Task(title)
+    return newTask
 }
 
 export { createTask }
