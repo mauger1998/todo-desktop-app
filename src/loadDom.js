@@ -1,4 +1,6 @@
 import { loadForm } from "./loadForm.js"
+import { newTaskArray } from "./index.js"
+import { displayTask } from "./displayTask.js"
 
 const body = document.querySelector("body")
 
@@ -12,6 +14,8 @@ function loadDom() {
     const testDiv = document.createElement("div")
     section.appendChild(testDiv)
     loadForm()
+    
+
     
 }
 

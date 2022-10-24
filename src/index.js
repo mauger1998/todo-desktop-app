@@ -5,10 +5,9 @@ import { Task } from "./taskConstructor.js"
 import { createTask } from "./taskConstructor.js"
 import { displayTask } from "./displayTask.js"
 import { getLocal, setLocal } from "./localStorage"
+import { makeSavedDataAppear } from "./showSaved.js"
 
-let newTaskArray = [
-
-]
+let newTaskArray = []
 
 loadDom()
 let returnedData = getLocal();
@@ -17,6 +16,9 @@ if (returnedData != null) {
         newTaskArray.push(data)
     })
 };
+makeSavedDataAppear()
+
+
 // getLocal()
 
 const addATaskButton = document.querySelector(".taskAdd")
@@ -37,7 +39,6 @@ taskForm.addEventListener("submit", (e) => {
     const section = document.querySelector("section")
     console.log(section)
     newTaskArray.push(createdTask)
-    // setLocal()
     console.log(newTaskArray)
     titleInput.value = ""
     dueDateInput.value = ""
@@ -50,5 +51,6 @@ taskForm.addEventListener("submit", (e) => {
 })
 
 export { newTaskArray }
+export { returnedData }
 
 

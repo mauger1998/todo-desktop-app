@@ -20,8 +20,9 @@ function loadForm() {
 
     const formButton = document.createElement("button");
     formButton.textContent = "Create Task"
-    mainFormBody.appendChild(dueDateInput)
     mainFormBody.appendChild(dueDateLabel)
+    mainFormBody.appendChild(dueDateInput)
+    
     mainFormBody.appendChild(formButton)
     mainFormBody.classList.add("appear")
     
