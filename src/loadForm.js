@@ -1,5 +1,7 @@
 const body = document.querySelector("body")
+const header = document.querySelector(".header")
 function loadForm() {
+
     let mainFormBody = document.createElement("form");
     let taskTitleLabel = document.createElement("label");
     let taskTitleInput = document.createElement("input");

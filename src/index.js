@@ -12,11 +12,15 @@ let newTaskArray = []
 loadDom()
 let returnedData = getLocal();
 if (returnedData != null) {
+    
     returnedData.forEach(data => {
         newTaskArray.push(data)
     })
+    makeSavedDataAppear()
 };
-makeSavedDataAppear()
+
+
+
 
 
 // getLocal()
@@ -25,6 +29,7 @@ const addATaskButton = document.querySelector(".taskAdd")
 const taskForm = document.querySelector(".mainFormBody")
 const titleInput = document.querySelector(".titleInput")
 const dueDateInput = document.querySelector(".dueDateInput")
+const header = document.querySelector(".header")
 
 
 addATaskButton.addEventListener("click", (e) => {
@@ -49,6 +54,8 @@ taskForm.addEventListener("submit", (e) => {
     setLocal()
 
 })
+
+header.appendChild(taskForm)
 
 export { newTaskArray }
 export { returnedData }
