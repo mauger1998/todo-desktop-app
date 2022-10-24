@@ -4,16 +4,26 @@ import { loadForm } from "./loadForm.js"
 import { Task } from "./taskConstructor.js"
 import { createTask } from "./taskConstructor.js"
 import { displayTask } from "./displayTask.js"
+import { getLocal, setLocal } from "./localStorage"
+
+let newTaskArray = [
+
+]
 
 loadDom()
+let returnedData = getLocal();
+if (returnedData != null) {
+    returnedData.forEach(data => {
+        newTaskArray.push(data)
+    })
+};
+// getLocal()
 
 const addATaskButton = document.querySelector(".taskAdd")
 const taskForm = document.querySelector(".mainFormBody")
 const titleInput = document.querySelector(".titleInput")
 const dueDateInput = document.querySelector(".dueDateInput")
-let newTaskArray = [
 
-]
 
 addATaskButton.addEventListener("click", (e) => {
     addATaskButton.classList.add("appear")
@@ -27,6 +37,7 @@ taskForm.addEventListener("submit", (e) => {
     const section = document.querySelector("section")
     console.log(section)
     newTaskArray.push(createdTask)
+    // setLocal()
     console.log(newTaskArray)
     titleInput.value = ""
     dueDateInput.value = ""
@@ -34,6 +45,7 @@ taskForm.addEventListener("submit", (e) => {
     addATaskButton.classList.remove("appear")
     section.innerHTML = " "
     displayTask(newTaskArray)
+    setLocal()
 
 })
 
