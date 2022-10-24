@@ -12,8 +12,16 @@ function loadForm() {
     mainFormBody.classList.add("mainFormBody");
     taskTitleInput.classList.add("titleInput")
 
+    let dueDateLabel = document.createElement("label")
+    dueDateLabel.textContent = "Date"
+    let dueDateInput = document.createElement("input")
+    dueDateInput.setAttribute("type", "date")
+    dueDateInput.classList.add("dueDateInput")
+
     const formButton = document.createElement("button");
     formButton.textContent = "Create Task"
+    mainFormBody.appendChild(dueDateInput)
+    mainFormBody.appendChild(dueDateLabel)
     mainFormBody.appendChild(formButton)
     mainFormBody.classList.add("appear")
     

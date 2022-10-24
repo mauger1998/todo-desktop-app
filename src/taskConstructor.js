@@ -1,12 +1,13 @@
 class Task {
-    constructor (title) {
-        this.title = title
+    constructor (title, dueDate) {
+        this.title = title,
+        this.dueDate = dueDate
     }
 
 }
 
-function createTask(title) {
-    let newTask = new Task(title)
+function createTask(title, dueDate) {
+    let newTask = new Task(title, dueDate)
     return newTask
 }
 
