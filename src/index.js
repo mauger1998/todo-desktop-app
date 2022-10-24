@@ -7,6 +7,7 @@ loadDom()
 const addATaskButton = document.querySelector(".taskAdd")
 
 
-addATaskButton.addEventListener("click", (e) => [
+addATaskButton.addEventListener("click", (e) => {
+    addATaskButton.classList.add("appear")
     loadForm()
-])
+})

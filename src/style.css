@@ -17,4 +17,14 @@ button {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color:white;
     background-color:black;
+    cursor:pointer;
+}
+
+.mainFormBody {
+    display:flex;
+    flex-direction: column;
+}
+
+.appear {
+    display:none;
 }

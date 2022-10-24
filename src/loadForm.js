@@ -5,9 +5,11 @@ function loadForm() {
     let taskTitleInput = document.createElement("input");
     taskTitleInput.setAttribute("type", "text");
     taskTitleInput.setAttribute("id", "titleInput");
+    taskTitleLabel.textContent = "Task"
     mainFormBody.appendChild(taskTitleLabel);
     mainFormBody.appendChild(taskTitleInput);
-    body.appendChild(mainFormBody)
+    body.appendChild(mainFormBody);
+    mainFormBody.classList.add("mainFormBody")
     
 }
 
