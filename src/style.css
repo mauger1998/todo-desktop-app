@@ -6,9 +6,11 @@
 }
 body {
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height:100vh;
+    gap:1rem;
 }
 button {
     padding:0.5em 1rem;
@@ -28,4 +30,10 @@ button {
 
 .appear {
     display:none;
+}
+
+.taskBox {
+    height:10vh;
+    width:90vw;
+    background-color:rgb(234, 232, 232);
 }
