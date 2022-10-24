@@ -31,7 +31,7 @@ taskForm.addEventListener("submit", (e) => {
     taskForm.classList.add("appear")
     addATaskButton.classList.remove("appear")
     section.innerHTML = " "
-    displayTask()
+    displayTask(createdTask)
 
 })
 

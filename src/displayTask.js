@@ -4,7 +4,7 @@ const body = document.querySelector("body")
 
 
 
-function displayTask() {
+function displayTask(task) {
     const section = document.querySelector("section")
     section.innerHTML = ""
     for (let i = 0; i < newTaskArray.length; i++) {
@@ -12,7 +12,7 @@ function displayTask() {
         let taskBox = document.createElement("div")
         taskBox.classList.add("taskBox")
         section.appendChild(taskBox)
-        taskBox.textContent = i
+        taskBox.textContent = `Task: ${task.title}`
 
     }
 }
