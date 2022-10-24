@@ -44,7 +44,21 @@ section {
 }
 .taskBox {
     display:flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    
     border-radius:0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;}
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding:3rem;
+    
+}
+
+.checkboxContainer {
+    display:flex;
+     
+    gap:1rem;
+    font-size:0.85rem;
+}
+#checkbox {
+/* visibility:hidden; */
+}
