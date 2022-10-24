@@ -1,4 +1,6 @@
 import { newTaskArray } from "./index.js"
+import img from "./xIcon.png"
+
 
 const body = document.querySelector("body")
 
@@ -36,6 +38,13 @@ function displayTask(task) {
         checkbox.setAttribute("id", "checkbox")
         checkboxContainer.appendChild(checkboxLabel)
         checkboxContainer.appendChild(checkbox)
+
+
+        let x = document.createElement("img");
+        x.src = img
+        x.classList.add("xIcon");
+        
+        checkboxContainer.appendChild(x)
         
 
     }
