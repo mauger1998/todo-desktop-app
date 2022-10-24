@@ -1,5 +1,6 @@
 import { newTaskArray } from "./index.js"
 import img from "./xIcon.png"
+import { taskBoxArray } from "./index.js"
 
 
 const body = document.querySelector("body")
@@ -45,6 +46,28 @@ function displayTask(task) {
         x.classList.add("xIcon");
         
         checkboxContainer.appendChild(x)
+
+        let checkboxes = document.querySelectorAll("#checkbox")
+        let checkboxesArray = Array.from(checkboxes)
+        console.log(checkboxesArray)
+        checkboxesArray.forEach(box => {
+            box.addEventListener("click", (e) => {
+                console.log("click")
+            })
+        })
+
+        const deleteIcon = document.querySelectorAll(".xIcon")
+        let deleteIconArray = Array.from(deleteIcon)
+
+        // deleteIconArray.forEach(icon => {
+        //     let index = deleteIconArray.indexOf(icon)
+        //     icon.addEventListener("click", (e) => {
+        //         let newArray = newTaskArray.splice(index, 1)
+        //         displayTask(newTaskArray)
+        //         localStorage.setItem("Stored Tasks", JSON.stringify(newTaskArray))
+                
+        //     })
+        // })
         
 
     }

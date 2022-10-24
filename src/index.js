@@ -54,6 +54,8 @@ taskForm.addEventListener("submit", (e) => {
     addATaskButton.classList.remove("appear")
     section.innerHTML = " "
     displayTask(newTaskArray)
+    location.reload()
+
     setLocal()
 
 })
@@ -70,7 +72,22 @@ arrayCheckboxes.forEach(checkbox => {
     })
 })
 
+const deleteIcon = document.querySelectorAll(".xIcon")
+let deleteIconArray = Array.from(deleteIcon)
+
+deleteIconArray.forEach(icon => {
+    let index = deleteIconArray.indexOf(icon)
+    icon.addEventListener("click", (e) => {
+        let newArray = newTaskArray.splice(index, 1)
+        displayTask(newTaskArray)
+        localStorage.setItem("Stored Tasks", JSON.stringify(newTaskArray))
+        location.reload()
+        
+    })
+})
+
 export { newTaskArray }
 export { returnedData }
+export { taskBoxArray }
 
 

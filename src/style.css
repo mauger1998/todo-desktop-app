@@ -58,15 +58,18 @@ form > button {
     height:10vh;
     width:90vw;
     background-color:rgba(234, 232, 232, 0.485);
+    transition:0.5s;
     
 }
 
 .opacity {
     opacity:0.3;
+    transition:0.5s;
     
 }
 .xIcon {
-    width:25px;
+    width:20px;
+    cursor:pointer;
 }
 section {
     display:flex;
