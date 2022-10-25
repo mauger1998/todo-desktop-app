@@ -6,10 +6,12 @@ import { createTask } from "./taskConstructor.js"
 import { displayTask } from "./displayTask.js"
 import { getLocal, setLocal } from "./localStorage"
 import { makeSavedDataAppear } from "./showSaved.js"
+import { checkDate } from "./checkForTodaysDate.js"
 
 let newTaskArray = []
 
 loadDom()
+
 let returnedData = getLocal();
 if (returnedData != null) {
     
@@ -17,7 +19,9 @@ if (returnedData != null) {
         newTaskArray.push(data)
     })
     makeSavedDataAppear()
+    checkDate()
 };
+
 
 
 

@@ -56,18 +56,8 @@ function displayTask(task) {
             })
         })
 
-        const deleteIcon = document.querySelectorAll(".xIcon")
-        let deleteIconArray = Array.from(deleteIcon)
-
-        // deleteIconArray.forEach(icon => {
-        //     let index = deleteIconArray.indexOf(icon)
-        //     icon.addEventListener("click", (e) => {
-        //         let newArray = newTaskArray.splice(index, 1)
-        //         displayTask(newTaskArray)
-        //         localStorage.setItem("Stored Tasks", JSON.stringify(newTaskArray))
-                
-        //     })
-        // })
+        
+        
         
 
     }
