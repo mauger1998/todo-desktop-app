@@ -4,13 +4,16 @@ import { format } from 'date-fns'
 
 function checkDate() {
     const red = document.querySelector(".red")
+    let counter = 0
     for (let i = 0; i < newTaskArray.length; i++) {
         let date = new Date()
         let dateFormat = format(date, "yyyy-MM-dd")
-        let counter = 0
+        
         if (newTaskArray[i].dueDate == dateFormat) {
-            counter++
+            
+            ++counter
             red.classList.add("show")
+            console.log(counter)
             red.textContent = counter
 
         }

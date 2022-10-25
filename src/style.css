@@ -113,6 +113,10 @@ header > ul > li {
     display:none;
     cursor:pointer;
     color:white;
+    text-align:center;
+    font-weight:700;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 .show {
     display:block;
