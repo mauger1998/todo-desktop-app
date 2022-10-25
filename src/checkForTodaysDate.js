@@ -7,8 +7,11 @@ function checkDate() {
     for (let i = 0; i < newTaskArray.length; i++) {
         let date = new Date()
         let dateFormat = format(date, "yyyy-MM-dd")
+        let counter = 0
         if (newTaskArray[i].dueDate == dateFormat) {
+            counter++
             red.classList.add("show")
+            red.textContent = counter
 
         }
     }
