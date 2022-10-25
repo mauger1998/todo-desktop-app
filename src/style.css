@@ -100,3 +100,21 @@ section {
 /* visibility:hidden; */
 }
 
+header > ul > li {
+    list-style:none;
+    padding:1rem;
+}
+.red {
+    width:1.25rem;
+    height:1.25rem;
+    background-color:red;
+    margin-right:1rem;
+    border-radius:1rem;
+    display:none;
+}
+.show {
+    display:block;
+}
+
+
+

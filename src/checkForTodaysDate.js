@@ -1,13 +1,14 @@
 import { newTaskArray } from "./index.js"
-import { format, formatDistance, formatRelative, subDays } from 'date-fns'
+import { format } from 'date-fns'
+
 
 function checkDate() {
+    const red = document.querySelector(".red")
     for (let i = 0; i < newTaskArray.length; i++) {
         let date = new Date()
-        let dateFormat = format(date, "yyyy/mm/dd")
-           
+        let dateFormat = format(date, "yyyy-MM-dd")
         if (newTaskArray[i].dueDate == dateFormat) {
-            console.log("today")
+            red.classList.add("show")
 
         }
     }

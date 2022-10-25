@@ -8,10 +8,22 @@ function loadDom() {
     const header = document.createElement("header")
     header.classList.add("header")
 
+    let todayList = document.createElement("ul")
+    let today = document.createElement("li")
+    todayList.appendChild(today)
+    header.appendChild(todayList)
+    today.textContent = "Today"
+
+    let red = document.createElement("div")
+    red.classList.add("red")
+    header.appendChild(red)
+
     body.appendChild(header)
     loadForm()
     const addATaskButton = document.createElement("button")
     header.appendChild(addATaskButton)
+
+    
 
     
     addATaskButton.classList.add("taskAdd")
