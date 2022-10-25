@@ -1,12 +1,12 @@
 import { newTaskArray } from "./index.js"
+import { format, formatDistance, formatRelative, subDays } from 'date-fns'
 
 function checkDate() {
-    console.log(newTaskArray + "hi")
     for (let i = 0; i < newTaskArray.length; i++) {
         let date = new Date()
-        console.log(date)
-           console.log(newTaskArray[i].dueDate)
-        if (newTaskArray[i].dueDate == date ) {
+        let dateFormat = format(date, "yyyy/mm/dd")
+           
+        if (newTaskArray[i].dueDate == dateFormat) {
             console.log("today")
 
         }

@@ -47,14 +47,8 @@ function displayTask(task) {
         
         checkboxContainer.appendChild(x)
 
-        let checkboxes = document.querySelectorAll("#checkbox")
-        let checkboxesArray = Array.from(checkboxes)
-        console.log(checkboxesArray)
-        checkboxesArray.forEach(box => {
-            box.addEventListener("click", (e) => {
-                console.log("click")
-            })
-        })
+        
+        
 
         
         

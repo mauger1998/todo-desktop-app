@@ -49,9 +49,7 @@ taskForm.addEventListener("submit", (e) => {
     e.preventDefault()
     let createdTask = createTask(titleInput.value, dueDateInput.value)
     const section = document.querySelector("section")
-    console.log(section)
     newTaskArray.push(createdTask)
-    console.log(newTaskArray)
     titleInput.value = ""
     dueDateInput.value = ""
     taskForm.classList.add("appear")
