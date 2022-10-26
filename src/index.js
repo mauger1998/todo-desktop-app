@@ -43,6 +43,7 @@ const section = document.querySelector("section")
 
 
 
+
 addATaskButton.addEventListener("click", (e) => {
     addATaskButton.classList.add("appear")
     taskForm.classList.remove("appear")
