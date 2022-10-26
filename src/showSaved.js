@@ -1,11 +1,10 @@
-import { returnedData } from "./index.js"
-import { displayTask } from "./displayTask.js"
-import { newTaskArray } from "./index.js"
+import { returnedData, newTaskArray } from "./index.js";
+import { displayTask } from "./displayTask.js";
 
 function makeSavedDataAppear() {
-    returnedData.forEach(data => {
-        displayTask(newTaskArray)
-    })
+  returnedData.forEach((data) => {
+    displayTask(newTaskArray);
+  });
 }
 
-export { makeSavedDataAppear }
+export { makeSavedDataAppear };
