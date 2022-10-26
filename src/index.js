@@ -7,6 +7,7 @@ import { displayTask } from "./displayTask.js"
 import { getLocal, setLocal } from "./localStorage"
 import { makeSavedDataAppear } from "./showSaved.js"
 import { checkDate } from "./checkForTodaysDate.js"
+import { showTodays } from "./showOnlyTodaysTasks.js"
 
 let newTaskArray = []
 
@@ -36,6 +37,9 @@ const dueDateInput = document.querySelector(".dueDateInput")
 const header = document.querySelector(".header")
 const checkbox = document.querySelectorAll("#checkbox")
 const taskBox = document.querySelectorAll(".taskBox")
+const todayLink = document.querySelector("li")
+const section = document.querySelector("section")
+
 
 
 
@@ -86,6 +90,11 @@ deleteIconArray.forEach(icon => {
         location.reload()
         
     })
+})
+
+todayLink.addEventListener("click", (e) => {
+    section.innerHTML = ""
+    showTodays()
 })
 
 export { newTaskArray }

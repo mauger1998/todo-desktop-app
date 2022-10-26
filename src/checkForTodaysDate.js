@@ -1,6 +1,8 @@
 import { newTaskArray } from "./index.js"
 import { format } from 'date-fns'
 
+let todaysDateArray = []
+
 
 function checkDate() {
     const red = document.querySelector(".red")
@@ -13,12 +15,15 @@ function checkDate() {
             
             ++counter
             red.classList.add("show")
-            console.log(counter)
             red.textContent = counter
+            todaysDateArray.push(newTaskArray[i])
+
 
         }
     }
     
 }
+
+export { todaysDateArray }
 
 export { checkDate }
