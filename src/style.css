@@ -100,6 +100,11 @@ section {
 /* visibility:hidden; */
 }
 
+header > ul {
+    display:flex;
+    flex-direction:row-reverse;
+}
+
 header > ul > li {
     list-style:none;
     padding:1rem;

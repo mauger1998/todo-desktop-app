@@ -14,6 +14,11 @@ function loadDom() {
     header.appendChild(todayList)
     today.textContent = "Today"
 
+    let projects = document.createElement("li")
+    todayList.appendChild(projects)
+    projects.textContent = "Projects"
+
+
     let red = document.createElement("div")
     red.classList.add("red")
     header.appendChild(red)
